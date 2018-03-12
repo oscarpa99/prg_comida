@@ -1,0 +1,2 @@
+package proyecto;
+public enum Gusto {dulce, salado, amargo}
