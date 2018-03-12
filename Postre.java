@@ -1,23 +1,57 @@
 
 package Hosteleria.model;
 
-/*
-* Postre.java
-*
-* Creada el 07-mar-2018, 9:54:04
-*
-* Desarrollada por Rafael en la empresa Aula6J el día 07-mar-2018
-*
-* Puede contactar conmigo en mail callefalsa123@yahoo.com
-
-/*
-
-/**
- *
- * @author Rafael
- * @version 1.01v
- * @date 07-mar-2018
- */
 public class Postre {
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Postre extends Consumicion {
+private Temperatura temperatura;
+private Gusto gusto;
+private String ingredientes;
+
+    public Postre(Temperatura temperatura, Gusto gusto, String ingredientes, double precio, String nombre) {
+        super(precio, nombre);
+        this.temperatura = temperatura;
+        this.gusto = gusto;
+        this.ingredientes = ingredientes;
+    }
+
+    public Temperatura getTemperatura() {
+        return temperatura;
+    }
+
+    public void setTemperatura(Temperatura temperatura) {
+        this.temperatura = temperatura;
+    }
+
+    public Gusto getGusto() {
+        return gusto;
+    }
+
+    public void setGusto(Gusto gusto) {
+        this.gusto = gusto;
+    }
+
+    public String getIngredientes() {
+        return ingredientes;
+    }
+
+    public void setIngredientes(String ingredientes) {
+        this.ingredientes = ingredientes;
+    }
+    
+    public void ordenarAlimentos(){
+        String ingre = this.ingredientes;
+        String orden = "";
+        Pattern pattern = Pattern.compile("\\w+");
+        Matcher matcher = pattern.matcher(ingre);
+        while (matcher.find()) {
+        //System.out.println(matcher.group());
+        orden = orden + matcher.group() + "\n";
+        this.ingredientes = orden;
+}
+        
+}
 
 }
