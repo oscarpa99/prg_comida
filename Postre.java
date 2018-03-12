@@ -21,24 +21,12 @@ private String ingredientes;
         return temperatura;
     }
 
-    public void setTemperatura(Temperatura temperatura) {
-        this.temperatura = temperatura;
-    }
-
     public Gusto getGusto() {
         return gusto;
     }
 
-    public void setGusto(Gusto gusto) {
-        this.gusto = gusto;
-    }
-
     public String getIngredientes() {
         return ingredientes;
-    }
-
-    public void setIngredientes(String ingredientes) {
-        this.ingredientes = ingredientes;
     }
     
     public void ordenarAlimentos(){
