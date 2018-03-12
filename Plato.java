@@ -19,5 +19,24 @@ package Hosteleria.model;
  * @date 07-mar-2018
  */
 public class Plato {
-
+    private TipoPlato TipoPlato;
+    private String ingrediente;
+    private int precio;
+    
+    public void plato (String ingrediente, int precio, String tipo){
+        this.ingrediente = ingrediente;
+        this.precio = precio;
+    }
+    
+    public void getingrediente(){
+        this.ingrediente = ingrediente;
+    }
+    
+    public void getprecio(){
+        this.precio = precio;
+    }
+    
+    public void gettipo(){
+        this.TipoPlato = TipoPlato;
+    }
 }
